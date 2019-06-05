@@ -1,0 +1,8 @@
+{
+  "name": "truehome-back",
+  "version": "1.0.0",
+  "description": "Technical challege made for TrueHome company by @mefitdev",
+  "main": "app.js",
+  "author": "MefitHp <mefitDev@gmail.com>",
+  "license": "MIT"
+}
