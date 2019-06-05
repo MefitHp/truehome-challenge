@@ -1,18 +1,18 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { Navbar, Brand, Content } from './MainLayout.emotion';
+import { Navbar, Brand, Content, Layout } from './MainLayout.emotion';
 import { Button } from '../elements/Button.emotion'
 import LandingPage from '../components/LandingPage/LandingPage'
+import Properties from '../components/Properties/Properties'
 
 const MainLayout = () => {
     return (
-        <div>
+        <Layout>
             <Navbar>
                 <Brand to="/">
                     TrueHome
                 </Brand>
                 <Button
-                    style={{ marginRight: 20 }}
                     to="/propiedades">Ver propiedades</Button>
             </Navbar>
             <Content>
@@ -25,11 +25,11 @@ const MainLayout = () => {
                     <Route
                         exact
                         path="/propiedades"
-                        render={props => <div>Propiedades</div>}
+                        component={Properties}
                     />
                 </Switch>
             </Content>
-        </div>
+        </Layout>
     )
 }
 

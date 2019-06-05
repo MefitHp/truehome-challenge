@@ -14,6 +14,7 @@ export const LandingPageContainer = styled.div`
 `
 
 export const LandingText = styled.h1`
+    text-align: center;
     font-size: 42px;
     text-shadow: 1px 3px 1px rgba(0,0,0,0.15);
     color: ${props => props.secondary ? props.theme.colors.primary : '#FFF'}
