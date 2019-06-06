@@ -1,14 +1,22 @@
-import React from 'react'
-import { Wrapper } from '../../elements/Wrapper.emotion'
-import { PropertiesTitle } from './Properties.emotion'
-const Properties = () => {
-    return (
-        <Wrapper>
-            <PropertiesTitle dark>
-                Propiedades disponibles
-            </PropertiesTitle>
-        </Wrapper>
-    )
-}
+import React from "react";
+import { Wrapper } from "../../elements/Wrapper.emotion";
+import { PropertiesTitle, PropertiesContainer } from "./Properties.emotion";
+import PropertyCard from "./PropertyCard";
 
-export default Properties
+const Properties = props => {
+  let properties = new Array(5).fill(null);
+  console.log(properties);
+
+  return (
+    <Wrapper>
+      <PropertiesTitle dark>Propiedades disponibles</PropertiesTitle>
+      <PropertiesContainer>
+        {properties.map((property, index) => (
+          <PropertyCard key={index} />
+        ))}
+      </PropertiesContainer>
+    </Wrapper>
+  );
+};
+
+export default Properties;
