@@ -6,7 +6,11 @@ import {
   PropertyCardBanner,
   Overlay,
   PropertyCardBody,
-  EditPropertyButton
+  EditPropertyButton,
+  LocationButton,
+  PropertyAddress,
+  PropertyCardInfo,
+  PropertyInfoButton
 } from "./Properties.emotion";
 
 const PropertyCard = () => {
@@ -17,14 +21,23 @@ const PropertyCard = () => {
         <Overlay>
           <PropertyCardTitle>Colonia Centro</PropertyCardTitle>
           <PropertyCardSubtitle>
-            Vendido por Carlos Vazquez
+            Vendido por Carlos Vazquez.
           </PropertyCardSubtitle>
         </Overlay>
       </PropertyCardBanner>
       <PropertyCardBody>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas blanditiis
-        voluptatibus dolores soluta fugiat tempore maxime ipsum, perspiciatis
-        necessitatibus recusandae?
+        <PropertyAddress>
+          <LocationButton className="fas fa-map-marker-alt" />
+          Alejandro Dumas 71, Polanco, 11550 Ciudad de México, CDMX.
+        </PropertyAddress>
+        <PropertyCardInfo>
+          <PropertyInfoButton
+            style={{ borderRight: "1px solid rgba(0,0,0,.1)" }}
+          >
+            Telefono
+          </PropertyInfoButton>
+          <PropertyInfoButton>Email</PropertyInfoButton>
+        </PropertyCardInfo>
       </PropertyCardBody>
     </PropertyCardContainer>
   );

@@ -7,23 +7,31 @@ export const PropertiesTitle = styled.h1`
 `;
 
 export const PropertiesContainer = styled.div`
+  padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  padding: 1em 0;
+  @media all and(max-width: 768) {
+    justify-content: space-between;
+  }
 `;
 
 export const PropertyCardContainer = styled.div`
   box-sizing: border-box;
-  margin: 10px;
+  margin: 5px;
+  flex: 0 1 calc(33% - 1em);
   border-radius: 5px;
-  max-width: 310px;
   box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.15);
   transition: 0.2s ease;
   &:hover {
     box-shadow: 1px 6px 6px 2px rgba(0, 0, 0, 0.3);
   }
+  @media screen and (max-width: 769px) {
+    flex: 0 1 calc(50% - 1em);
+  }
+  @media screen and (max-width: 550px) {
+    flex: 1;
+  }
 `;
-
 export const PropertyCardTitle = styled.h2`
   font-size: 1.5em;
   font-weight: 600;
@@ -78,4 +86,30 @@ export const EditPropertyButton = styled.i`
   &:hover {
     box-shadow: -1px 4px 2px rgba(255, 255, 255, 0.55);
   }
+`;
+
+export const LocationButton = styled.i`
+  padding: 5px;
+  color: brown;
+`;
+
+export const PropertyAddress = styled.p`
+  color: rgba(0, 0, 0, 0.65);
+  padding-bottom: 10px;
+  font-weight: 550;
+  text-align: justify;
+  text-justify: inter-word;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+`;
+
+export const PropertyCardInfo = styled.div`
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+`;
+
+export const PropertyInfoButton = styled.p`
+  text-align: center;
+  flex: 1;
+  padding: 8px 16px;
 `;
